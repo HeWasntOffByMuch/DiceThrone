@@ -134,14 +134,25 @@ function App() {
             <div className="form-result">
               <div className="form">
                 {values.players.map((_player, index) => {
-                  return <div><button onClick={() => {
-                    const newPlayers = structuredClone(values.players);
-                    const newResults = structuredClone(values.results);
-                    newPlayers.splice(index, 1);
-                    newResults.splice(index, 1)
-                    setFieldValue('players', newPlayers)
-                    setFieldValue('results', newResults)
-                  }} tabIndex={-1} className="deleteButton">X</button><Field type="text" name={`players[${index}]`} /></div>;
+                  return (
+                    <div>
+                      <button
+                        onClick={() => {
+                          const newPlayers = structuredClone(values.players);
+                          const newResults = structuredClone(values.results);
+                          newPlayers.splice(index, 1);
+                          newResults.splice(index, 1);
+                          setFieldValue("players", newPlayers);
+                          setFieldValue("results", newResults);
+                        }}
+                        tabIndex={-1}
+                        className="deleteButton"
+                      >
+                        X
+                      </button>
+                      <Field type="text" name={`players[${index}]`} />
+                    </div>
+                  );
                 })}
                 {values.players.length < MAX_NUMBER_OF_PLAYERS && (
                   <Field

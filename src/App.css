@@ -29,15 +29,21 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 48px;
+  gap: 24px;
   font-size: calc(10px + 1vmin);
 }
 
+.editions {
+  padding: 0px 8px;
+}
+
 .editions > label {
+  white-space: nowrap;
   margin-right: 12px;
 }
 
 .form-result {
+  padding: 8px 16px;
   display: grid;
   column-gap: 48px;
   grid-template-columns: 1fr 1fr;
@@ -50,6 +56,10 @@
   justify-content: flex-start;
   align-items: flex-end;
   grid-area: inputs;
+}
+
+.form > div {
+  white-space: nowrap;
 }
 
 .form input {
@@ -66,6 +76,7 @@
 }
 
 .results > p {
+  white-space: nowrap;
   height: 21.5px;
 }
 
@@ -91,21 +102,21 @@
 }
 
 .deleteButton {
-	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
-	background-color:#d0451b;
-	border-radius:4px;
-	border:1px solid #942911;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:2px 6px;
+  background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+  background-color: #d0451b;
+  border-radius: 4px;
+  border: 1px solid #942911;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 2px 6px;
   margin: 2px;
-	text-decoration:none;
+  text-decoration: none;
 }
 .deleteButton:hover {
-	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
-	background-color:#bc3315;
+  background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+  background-color: #bc3315;
 }
