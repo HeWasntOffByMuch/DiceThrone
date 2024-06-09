@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  height: 100vh;
+  color: white;
 }
 
 .App-logo {
@@ -14,25 +17,95 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sub-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 48px;
+  font-size: calc(10px + 1vmin);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.editions > label {
+  margin-right: 12px;
+}
+
+.form-result {
+  display: grid;
+  column-gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "inputs results";
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  grid-area: inputs;
+}
+
+.form input {
+  max-width: 112px;
+  margin: 16px 8px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  grid-area: results;
+}
+
+.results > p {
+  height: 21.5px;
+}
+
+.confirmButton {
+  box-shadow: inset 0px 1px 0px 0px #a4e271;
+  background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+  background-color: #89c403;
+  border-radius: 6px;
+  border: 1px solid #74b807;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528009;
+}
+.confirmButton:hover {
+  background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+  background-color: #77a809;
+}
+
+.deleteButton {
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:4px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:2px 6px;
+  margin: 2px;
+	text-decoration:none;
+}
+.deleteButton:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
 }
